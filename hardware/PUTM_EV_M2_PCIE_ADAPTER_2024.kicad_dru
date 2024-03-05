@@ -1,0 +1,5 @@
+(version 1)
+(rule "odstęp dp"
+    (constraint clearance (min "0.7mm"))
+    (condition "!AB.isCoupledDiffPair() && B.NetClass == 'PCIE*' && A.NetClass == 'PCIE*' && !B.memberOfFootprint('*')")
+)
