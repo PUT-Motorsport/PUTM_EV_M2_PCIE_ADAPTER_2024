@@ -1,0 +1,6 @@
+﻿Designator,Footprint,Quantity,Value,LCSC Part #
+"C1, C3, C5",0402,3,100nF,
+"C10, C2, C4, C6, C7, C8, C9",0603,7,1uF,
+J1,SAMTEC_PCIE-064-02-X-D-RA,1,PCIE-064-02-X-D-RA,
+J2,M.2-KEY-M-FAT,1,M2_KEY_M,
+J3,SolderWire-0.1sqmm_1x04_P3.6mm_D0.4mm_OD1mm_Relief,1,PCB_WIRE,

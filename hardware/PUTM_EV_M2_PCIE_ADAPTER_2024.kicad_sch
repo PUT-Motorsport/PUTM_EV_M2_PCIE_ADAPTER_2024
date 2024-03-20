@@ -6214,7 +6214,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Snapeda:M.2-KEY-M"
+		(property "Footprint" "Snapeda:M.2-KEY-M-FAT"
 			(at 198.12 80.01 0)
 			(effects
 				(font

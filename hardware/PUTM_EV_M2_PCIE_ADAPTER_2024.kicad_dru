@@ -1,5 +1,20 @@
 (version 1)
-(rule "odstęp dp"
-    (constraint clearance (min "0.7mm"))
-    (condition "!AB.isCoupledDiffPair() && B.NetClass == 'PCIE*' && A.NetClass == 'PCIE*' && !B.memberOfFootprint('*')")
+#(rule "odstęp dp"
+#    (constraint clearance (min "0.7mm"))
+#    (condition "!AB.isCoupledDiffPair() && B.NetClass == 'PCIE*' && A.NetClass == 'PCIE*' && !B.memberOfFootprint('*')")
+#)
+
+(rule "PCIE diff pairs length"
+	(condition "A.NetClass == 'PCIE_*'")
+	(constraint length (min 69mm) (opt 70mm) (max 71mm))
+	(constraint skew (opt 0mm)))
+
+(rule "Ignore errors between pads"
+	(condition "A.Type == 'Pad' && B.Type == 'Pad'")
+	(constraint clearance (min 0.1mm))
+)
+
+(rule "Ignore pad to edge error"
+	(condition "A.Type == 'Pad'")
+	(constraint edge_clearance (min 0mm))
 )
